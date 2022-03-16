@@ -1,10 +1,10 @@
-BATRUCH SŁAWOMIR - BARCODE CODE 128 TYPE C DECODER
+# BATRUCH SŁAWOMIR - BARCODE CODE 128 TYPE C DECODER
 
 main_new.asm - Main program
 codes.asm - list of the code 128 codes, in hexadecimal
 <Name>.bmp - bmp file from which barcode is read. Name differes between tests
 ======================================================================================
-List of tests:
+## List of tests:
 test1 - should output 2018. Checks 1.bmp
 test2 - should output 2018. Checks 2.bmp. The difference between 1.bmp is the width of bars
 test3 - should output 031428. Checks 3.bmp. This tests checks if 0 at the start is properly outputted
@@ -27,7 +27,7 @@ Slight issue (already removed - look edit): for 3.bmp, first 0 is not printed ou
 Edit: This has been fixed by implementing a new function (check_zero_start) that adds the 0 if the first element
 to print is < 10, i.e. 01, 02, 03 etc...
 
-Brief description of the program structure
+## Brief description of the program structure
 1. Load the file
 2. Load header
 3. Check neccessary metadata (bits/depth, width, height, filetype etc.)
