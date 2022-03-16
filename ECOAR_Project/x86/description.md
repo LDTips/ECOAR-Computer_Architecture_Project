@@ -14,27 +14,28 @@ invalid_height.bmp , invalid_width.bmp, invalid_depth.bmp - should yield invalid
 some_text_file.txt - should yield invalid metadata error\
 
 ## General principle of operation:
-1. Handle the file header (C language). If correct, perform neccessary setup (asm prologue etc.)\
-2. Determine the first black pixel\
-3. Determine width of the smallest bar\
-4. Read 11 bars and save the result as a binary string where 1 is black bar, 0 is white bar\
-5. Compare the obtained symbol with the symbol array\
-6. If the symbol was found, add it to the output symbol array and perform neccessary checksum calculations\
-7. If symbol wasn't found, fetch two additional bars\
-8. Compare the symbol to a stop sign\
-9. If it matches, check if the checksum is correct\
-10. If it is, perform slight modifications to the char array\
-11. Output the decimal values of chars found in the array\
-(If the value is <10, add '0' manually before the digit)\
+1. Handle the file header (C language). If correct, perform neccessary setup (asm prologue etc.)
+2. Determine the first black pixel
+3. Determine width of the smallest bar
+4. Read 11 bars and save the result as a binary string where 1 is black bar, 0 is white bar
+5. Compare the obtained symbol with the symbol array
+6. If the symbol was found, add it to the output symbol array and perform neccessary checksum calculations
+7. If symbol wasn't found, fetch two additional bars
+8. Compare the symbol to a stop sign
+9. If it matches, check if the checksum is correct
+10. If it is, perform slight modifications to the char array
+11. Output the decimal values of chars found in the array
+
+(If the value is <10, add '0' manually before the digit)
 
 Note that the principle of operation is the same as for the MIPS project
 
 ## Makefile
 Consists of 4 parts:
-1. Create a \*.o file from the .asm code\
-2. Do the same for the main.c file\
-3. Link files together\
-4. Clear the linker files\
+1. Create a \*.o file from the .asm code
+2. Do the same for the main.c file
+3. Link files together
+4. Clear the linker files
 ## Tests
-script.sh runs all tests, one after other. It's found in the Tests folder
+script.sh runs all tests, one after other. It's found in the Tests folder\
 Note: script.sh does not contain make command. Make should be done manually
