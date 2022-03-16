@@ -1,23 +1,24 @@
-# BATRUCH SŁAWOMIR - BARCODE CODE 128 TYPE C DECODER
+# BARCODE CODE 128 TYPE C DECODER - SŁAWOMIR BATRUCH
 
-main_new.asm - Main program
-codes.asm - list of the code 128 codes, in hexadecimal
-<Name>.bmp - bmp file from which barcode is read. Name differes between tests
-======================================================================================
-## List of tests:
-test1 - should output 2018. Checks 1.bmp
-test2 - should output 2018. Checks 2.bmp. The difference between 1.bmp is the width of bars
-test3 - should output 031428. Checks 3.bmp. This tests checks if 0 at the start is properly outputted
+main_new.asm - Main program\
+codes.asm - list of the code 128 codes, in hexadecimal\
+<Name>.bmp - bmp file from which barcode is read. Name differes between tests\
 
-test4 and test5 - should output barcode type a or type b error
-test6 - should put invalid descriptor
-test7 - should put invalid resolution
-test8 - should put invalid resolution
-test9 - should put invalid bits/pixel (depth)
-test10 - should put "not a barcode" (no black pixel)
-test11 - should put "not a barcode" (max black bar width exceeded)
-test12 - should put "invalid stopsign" (the check for the validity is done at the end)
+## List of tests
+test1 - should output 2018. Checks 1.bmp\
+test2 - should output 2018. Checks 2.bmp. The difference between 1.bmp is the width of bars\
+test3 - should output 031428. Checks 3.bmp. This tests checks if 0 at the start is properly outputted\
 
+test4 and test5 - should output barcode type a or type b error\
+test6 - should put invalid descriptor\
+test7 - should put invalid resolution\
+test8 - should put invalid resolution\
+test9 - should put invalid bits/pixel (depth)\
+test10 - should put "not a barcode" (no black pixel)\
+test11 - should put "not a barcode" (max black bar width exceeded)\
+test12 - should put "invalid stopsign" (the check for the validity is done at the end)\
+
+## General information
 Documentation and explanations regarding functions and instructions provided in comments.
 Almost every instruction is commented, and the general principle of the program explained.
 
