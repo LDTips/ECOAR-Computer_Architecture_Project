@@ -1,5 +1,5 @@
 # ECOAR_Project
-MIPS assembly and Intel x86 assembly project from Computer Architecture course
+MIPS assembly and Intel x86 assembly project from Computer Architecture course\
 Done during my 4th semester of studies, summer 2021.
 
 ## Task
